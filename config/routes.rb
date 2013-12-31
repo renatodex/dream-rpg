@@ -1,8 +1,9 @@
 LuluRpg::Application.routes.draw do
-  get "admin/index"
-  get "admin/new"
-  get "admin/create"
-  get "home/index"
+
+  get 'casadabaro' => 'admin#index'
+  get 'casadabaro/criar-chave' => 'admin#new'
+  get 'casadabaro/salvar-chave' => 'admin#create'
+
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

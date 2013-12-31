@@ -1,5 +1,7 @@
-class AdminController < ApplicationController
-  def index
+class AdminController < ApplicationController  
+  layout 'admin'
+  
+  def index    
   end
 
   def new

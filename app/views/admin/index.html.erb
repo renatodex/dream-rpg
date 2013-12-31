@@ -14,7 +14,10 @@
 	
 		<% @keys.each do |k| %>
 			<tr>
-				<td><%= k.label %></td>
+				<td>
+					<%= k.label %>
+					(<a href="<%= register_url(k.label)%>">URL DA CHAVE</a>)
+				</td>
 				<td><%= k.slots %></td>
 				<td><%= k.slots %></td>
 				<td><%= k.expiration_date || '-' %></td>

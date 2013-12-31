@@ -10,7 +10,7 @@ class AdminController < ApplicationController
 
   def create
     k = Key.new
-    k.label = params['KeyData']["label"]
+    k.label = Digest::SHA1.hexdigest rand(99999999999999999999).to_s
     k.slots = params['KeyData']["slots"]    
     k.expiration_date= params['KeyData']["expiration_date"]    
     

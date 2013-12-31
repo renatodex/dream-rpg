@@ -3,11 +3,6 @@
 	
 	<%= form_tag save_key_path do %>
 		<label>
-			Código da Chave
-			<input type="text" name="KeyData[label]" />
-		</label>
-
-		<label>
 			Total de Vagas
 			<input type="text" name="KeyData[slots]" />
 		</label>
@@ -17,6 +12,7 @@
 			<input type="text" name="KeyData[expiration_date]" />
 		</label>
 
+		<input type="button" value="<< voltar" onClick="javascript:history.back(-1);"/>
 		<input type="submit" value="criar chave"/>
 	<% end %>
 </section>

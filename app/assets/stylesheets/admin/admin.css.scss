@@ -41,3 +41,28 @@ h1 {
 	margin:0 auto;
 	margin-bottom:20px;
 }
+
+.casadabaro-criar-chave {
+	label {
+		display:block;
+		margin:20px;
+	}
+	
+	input[type=text] {
+		padding:5px;
+		color:#000;
+		border:1px solid #ddd;
+		font-size:16px;
+		letter-spacing:1px;
+	}
+	
+	input[type=submit] {
+		display:block;
+		margin:0 auto;
+		padding:5px;
+		color:#000;
+		border:1px solid #000;
+		font-size:16px;
+		letter-spacing:1px;		
+	}
+}

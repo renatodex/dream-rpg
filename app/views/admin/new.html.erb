@@ -1,2 +1,22 @@
-<h1>Admin#new</h1>
-<p>Find me in app/views/admin/new.html.erb</p>
+<section class="casadabaro-criar-chave">
+	<h1 id="nova_chave">Nova Chave</h1>
+	
+	<%= form_tag save_key_path do %>
+		<label>
+			Código da Chave
+			<input type="text" name="KeyData[label]" />
+		</label>
+
+		<label>
+			Total de Vagas
+			<input type="text" name="KeyData[slots]" />
+		</label>
+
+		<label>
+			Data de Expiração
+			<input type="text" name="KeyData[expiration_date]" />
+		</label>
+
+		<input type="submit" value="criar chave"/>
+	<% end %>
+</section>

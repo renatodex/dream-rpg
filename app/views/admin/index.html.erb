@@ -13,13 +13,13 @@
 		</tr>
 	
 		<% @keys.each do |k| %>
-		<tr>
-			<td><%= k.label %></td>
-			<td><%= k.slots %></td>
-			<td>0</td>
-			<td><%= k.expiration_date %></td>
-			<td><a href="#">invalidar</a></td>								
-		</tr>
+			<tr>
+				<td><%= k.label %></td>
+				<td><%= k.slots %></td>
+				<td><%= k.slots %></td>
+				<td><%= k.expiration_date || '-' %></td>
+				<td><a href="#">invalidar</a></td>								
+			</tr>
 		<% end %>
 	</table>
 <% else %>

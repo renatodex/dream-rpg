@@ -1,8 +1,8 @@
 LuluRpg::Application.routes.draw do
 
-  get 'casadabaro' => 'admin#index'
+  get 'casadabaro' => 'admin#index', :as => 'key_list'
   get 'casadabaro/criar-chave' => 'admin#new', :as => 'new_key'
-  get 'casadabaro/salvar-chave' => 'admin#create'
+  post 'casadabaro/salvar-chave' => 'admin#create', :as => 'save_key'
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  label: MyString
+  slots: 1
+  expiration_date: 2013-12-31
+  disabled_at: 2013-12-31
+
+two:
+  label: MyString
+  slots: 1
+  expiration_date: 2013-12-31
+  disabled_at: 2013-12-31

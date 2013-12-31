@@ -1,7 +1,7 @@
 LuluRpg::Application.routes.draw do
 
   get 'casadabaro' => 'admin#index'
-  get 'casadabaro/criar-chave' => 'admin#new'
+  get 'casadabaro/criar-chave' => 'admin#new', :as => 'new_key'
   get 'casadabaro/salvar-chave' => 'admin#create'
 
   root 'home#index'

@@ -1,7 +1,8 @@
 class AdminController < ApplicationController  
   layout 'admin'
   
-  def index    
+  def index  
+    @keys = Key.find(:all)  
   end
 
   def new

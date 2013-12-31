@@ -17,6 +17,23 @@ body {
 	padding:20px;
 	width:600px;
 	background-color:#fff;
+	
+	table {
+		
+		th {
+			background-color:#eee;
+		}
+		
+		th, td {
+			font-size:14px;
+			padding:5px;
+		}
+		
+		td {
+			border:1px solid #eee;
+		}
+		
+	}
 }
 
 h1 {

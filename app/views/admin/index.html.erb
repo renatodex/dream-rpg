@@ -1,2 +1,27 @@
-<h1>Admin#index</h1>
-<p>Find me in app/views/admin/index.html.erb</p>
+<h1>Lista de Chaves</h1>
+
+<% if @keys.count > 0 %>
+	<p>Se quiser criar uma nova chave, <a href="<%= new_key_path %>">clique aqui</a></p>
+
+	<table>
+		<tr>
+			<th>Código da Chave</th>
+			<th>Vagas Totais</th>
+			<th>Vagas Disponíveis</th>
+			<th>Expiração da Chave</th>
+			<th>Ações</th>				
+		</tr>
+	
+		<% @keys.each do |k| %>
+		<tr>
+			<td><%= k.label %></td>
+			<td><%= k.slots %></td>
+			<td>0</td>
+			<td><%= k.expiration_date %></td>
+			<td><a href="#">invalidar</a></td>								
+		</tr>
+		<% end %>
+	</table>
+<% else %>
+	<p>Não há nenhuma chave ainda, para criar uma nova chave, <a href="<%= new_key_path %>">clique aqui</a></p>
+<% end %>

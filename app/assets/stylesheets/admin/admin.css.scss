@@ -1,3 +1,26 @@
 // Place all the styles related to the Admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+	margin:30px;
+	background-color:#ccc;	
+}
+
+* {
+	font-family:Arial;
+}
+
+.casadabaro {
+	margin:0 auto;
+	padding:20px;
+	width:600px;
+	background-color:#fff;
+}
+
+h1 {
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:20px;
+}

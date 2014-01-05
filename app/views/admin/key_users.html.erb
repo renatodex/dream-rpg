@@ -1,0 +1,28 @@
+<h1>Usuários da Chave : <%= @key_label %></h1>
+
+<% if @users.count > 0 %>
+	<p>Usuários cadastrados usando essa chave...</p>
+
+	<table>
+		<tr>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Data de entrada</th>
+		</tr>
+	
+		<% @users.each do |u| %>
+			<tr>
+				<td><%= u.name %></td>
+				<td><%= u.login %></td>		
+				<td><%= u.created_at %></td>
+			</tr>
+		<% end %>
+	</table>
+<% else %>
+	<p>Não há usuários cadastrados para esta chave</a></p>
+	<p></p>
+<% end %>
+
+<p style="text-align:right">
+	<a href="javascript:history.back(-1)">&lt;&lt; voltar para lista das chaves</a>
+</p>

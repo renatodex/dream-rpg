@@ -9,7 +9,7 @@
 			<th>Vagas Totais</th>
 			<th>Vagas Disponíveis</th>
 			<th>Expiração da Chave</th>
-			<th>Ações</th>				
+			<th>Usuários da Chave</th>				
 		</tr>
 	
 		<% @keys.each do |k| %>
@@ -19,9 +19,9 @@
 					(<a href="<%= register_url(k.label)%>">URL DA CHAVE</a>)
 				</td>
 				<td><%= k.slots %></td>
-				<td><%= k.slots %></td>
+				<td><%= k.available_slots %></td>
 				<td><%= k.expiration_date || '-' %></td>
-				<td><a href="#">invalidar</a></td>								
+				<td><a href="<%= key_users_path(k.label) %>">ver usuários</a></td>								
 			</tr>
 		<% end %>
 	</table>

@@ -1,3 +1,39 @@
-<section class="doc-access-valid">
-	<h1>Parabéns, você inseriu a chave correta e pode acessar os docs de Análise!</h1>
+<section class="lulurpg">
+	
+	<%= form_tag :register_save, :method => 'post' do %>
+	
+		<input type="hidden" name="UserData[key_id]" value="<%= @key_id %>">
+		
+		<article>
+			<a href="<%= root_url %>" class="logo">LuLu RPG</a>
+		</article>
+	
+		<% if !@errors.nil? %>
+			<article class="register-errors">
+				<ul>
+					<% @errors.each do |e| %>
+						<li><%= e %></li>
+					<% end %>
+				</ul>
+			</article>
+		<% end %>
+	
+		<article class="lulurpg-register">
+			<h1>registre-se para acessar os docs</h1>
+		
+			<dt>nome</dt>
+			<dd><input type="text" value="<%= @data.try(:[], "name") %>" name="UserData[name]" maxlength=250 /></dd>
+		
+			<dt>email</dt>
+			<dd><input type="text" value="<%= @data.try(:[], "login") %>" name="UserData[login]" maxlength=250 /></dd>
+		
+			<dt>senha (6 à 16 caracteres)</dt>
+			<dd><input type="password" value="<%= @data.try(:[], "password") %>" name="UserData[password]" maxlength=16 /></dd>		
+		</article>
+	
+		<article class="submit-options">
+			<input type="submit" class="save-button" value="criar meu cadastro" />
+		</article>
+	<% end %>
+	
 </section>

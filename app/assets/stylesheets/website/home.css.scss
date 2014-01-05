@@ -12,6 +12,11 @@
   -o-transition: all 0.10s ease-in-out;
 }
 
+@mixin border-box {
+	box-sizing:border-box;
+}
+
+
 @mixin font-thegirl {
 	font-family:'The Girl Next Door', cursive, Arial;
 }
@@ -77,7 +82,7 @@
 				text-align: center;
 				width: 360px;
 				height: 23px;
-				padding-top: 7px;				
+				padding-top: 13px;				
 			}
 			
 			.locked-icon {
@@ -139,6 +144,8 @@
 			
 			p {
 				@include font-comingsoon;
+				line-height: 26px;
+				margin-bottom: 15px;
 			}
 			
 			.access-cmm {
@@ -159,13 +166,84 @@
 	}
 }
 
-.doc-access-valid {
-	h1 {
-		@include font-comingsoon;
-		border:1px solid #000;
-		padding:10px;
-		background-color:lightgreen;
+.register-errors {
+	@include font-comingsoon;
+	width: 370px;
+	margin: 0 auto;
+	background-color: antiquewhite;
+	padding: 13px;
+	box-sizing: border-box;
+	line-height: 20px;
+	border-radius: 12px;
+	margin-top: 20px;
+	
+	ul {
+		padding-left:20px;
+		list-style-type:circle;
 	}
+}
+
+.lulurpg-register {
+	@include border-box;
+	@include font-comingsoon;
+	border:1px dashed #000;
+	border-radius:12px;
+	padding:30px;
+	width:370px;
+	margin:0 auto;
+	margin-top:20px;
+	
+	h1 {
+		font-size:20px;
+		margin-bottom:20px;
+	}
+	
+	dt {
+		color:#568E7B;
+	}
+	
+	dd {
+		margin-bottom:10px;
+	}
+	
+	input[type=text], input[type=password] {
+		@include font-comingsoon;
+		border:1px solid #568E7B;
+		border-radius:12px;
+		padding:5px 10px;
+		font-size:14px;
+		margin:5px;
+		outline: none;
+	}
+	
+	input[type=password] {
+		letter-spacing:4px;
+	}
+}
+
+.submit-options {
+	text-align:center;
+	margin-top:20px;
+		margin-bottom:40px;
+	
+	.save-button {
+		@include fast-ease-out;
+		@include font-comingsoon;
+		background-color:#568E7B;
+		color:#fff;
+		border-radius:12px;
+		text-align:center;
+		padding:10px;
+		border:0px;
+		margin:0 auto;
+		width:370px;
+		cursor:pointer;
+		font-size:17px;
+		
+		&:hover {
+			background-color:#71A996;
+		}
+	}	
 }
 
 .doc-access-invalid {
@@ -178,3 +256,36 @@
 	}
 }
 
+
+.no-slots {
+	.no-slots-button {
+		display:block;
+		margin-left: 70px;
+		margin-top: 20px;
+		cursor:pointer;	
+		width:300px;
+		
+		&:hover {
+			opacity:0.8;
+		}	
+	}
+	
+	.no-slots-girl {
+		display:block;
+		position: fixed;
+		bottom: 0px;
+		right: 100px;
+	}
+	
+	.no-slots-text {
+		display:block;
+		margin-left: 70px;
+		margin-top: 20px;		
+	}
+	
+	.no-slots-logo {
+		display:block;
+		margin-left: 70px;
+		margin-top: 50px;		
+	}
+}

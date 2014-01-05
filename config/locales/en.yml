@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  register_empty_name: 'O nome não pode ser vazio!'
+  register_empty_login: 'O e-mail não pode ser vazio!'
+  register_empty_password: 'Senha não pode ser vazia!'
+  register_duplicated_login: 'Este e-mail já está sendo usado!'
+  register_invalid_format_name: 'O nome deve conter apenas Letras, Números e Espaços'
+  register_invalid_length_name: 'O nome deve ter no mínimo 3 e no máximo 100 caracteres'
+  register_login_invalid_email: 'O e-mail informado é inválido'
+  register_invalid_length_password: 'A senha deve conter de 6 a 16 caracteres'

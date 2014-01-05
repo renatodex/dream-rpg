@@ -23,7 +23,7 @@ class HomeController < ApplicationController
         u.key_id = params["UserData"]["key_id"]
       
         if u.save
-          redirect_to :invalid_key
+          redirect_to :wait_soon
         else
           @errors = u.errors.messages.values.flatten
           @data = params["UserData"]
@@ -38,5 +38,8 @@ class HomeController < ApplicationController
   end
   
   def no_slots
+  end
+  
+  def wait_soon
   end
 end

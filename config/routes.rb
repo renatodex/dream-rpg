@@ -6,6 +6,7 @@ LuluRpg::Application.routes.draw do
 
   root 'home#index'
   get '/c/:key' => 'home#register', :as => 'register'
+  get '/chave-invalida' => 'home#invalid_key', :as => 'invalid_key'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -12,6 +12,8 @@ LuluRpg::Application.routes.draw do
   get '/chave-invalida' => 'home#invalid_key', :as => 'invalid_key'
   get '/recalque' => 'home#no_slots', :as => 'no_slots'
   get '/em-breve' => 'home#wait_soon', :as => 'wait_soon'
+
+	get '/grid-de-avaliacoes' => 'home#review_grid', :as => 'review_grid'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

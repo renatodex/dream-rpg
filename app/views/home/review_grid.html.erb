@@ -1,0 +1,31 @@
+<section id="review-grid">
+
+	<h1><%= image_tag 'views/logo.png' %></h1>
+
+	<% if @reviews.count > 0 %>
+		<% @reviews.each do |r| %>
+			<article class="char-review">
+				<img src="<%= r.image_url %>" class="char-avatar" />
+		
+				<h2><%= r.name %></h2>
+		
+				<table>
+					<tr>
+						<th>Ainda joga?</th>
+						<td><%= r.is_playing? %></td>
+					</tr>
+					<tr>
+						<th>Rating</th>
+						<td><%= r.rating %></td>
+					</tr>			
+				</table>
+		
+				<%= image_tag 'views/home/review_demo.png' %>
+		
+			</article>		
+		<% end %>
+	<% else %>
+		<p class="notyet">Ainda não há nenhuma avaliação. Crie uma agora!</p>
+	<% end %>
+
+</section>

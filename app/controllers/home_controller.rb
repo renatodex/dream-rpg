@@ -42,4 +42,8 @@ class HomeController < ApplicationController
   
   def wait_soon
   end
+
+	def review_grid
+		@reviews = Review.where({})
+	end
 end

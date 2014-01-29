@@ -312,8 +312,12 @@
 		}*/
 	}
 	
+	#char-review-tags {
+		border:2px dashed #ccc;
+		border-radius:20px;
+	}
+	
 	.left-arrow, .right-arrow {
-		width:165px;
 		position:absolute;
 		margin-top:120px;		
 		
@@ -327,10 +331,12 @@
 	}
 	
 	.left-arrow {
+		margin-top:150px;
 		left:170px;
 	}
 	
 	.right-arrow {
+		margin-top:70px;
 		right:170px;
 	}
 	

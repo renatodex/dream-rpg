@@ -50,6 +50,7 @@ class HomeController < ApplicationController
 
 	def review_grid
 		@review = Review.limit(1).order("RANDOM()").first
+		@review_tags_json = @review.build_review_tags.to_json
 		render :layout => 'bootstrap/navbar'
 	end
 end

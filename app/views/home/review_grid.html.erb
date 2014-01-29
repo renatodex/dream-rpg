@@ -1,10 +1,13 @@
 <section id="review-grid">
+	
+	<input type="hidden" class="page-data" data-review-tags-json="<%= @review_tags_json %>">
+	
 	<nav>
 		<a class="left-arrow" href="<%= review_grid_path %>">
-			<%= image_tag 'views/home/arrow-left.png' %>
+			<%= image_tag 'views/home/button-dislike.png' %>
 		</a>
 		<a class="right-arrow" href="<%= review_grid_path %>">
-			<%= image_tag 'views/home/arrow-right.png' %>			
+			<%= image_tag 'views/home/button-like.png' %>			
 		</a>
 	</nav>	
 	
@@ -29,7 +32,7 @@
 				</tr>			
 			</table>
 	
-			<%= image_tag 'views/home/review_demo.png', :width => '100%'  %>
+			<canvas id="char-review-tags" width=340 height=150></canvas>
 			
 			<div class="review-options">
 				<div class="profile-button">
@@ -43,3 +46,15 @@
 		<p class="notyet">Ainda não há nenhuma avaliação. Crie uma agora!</p>
 	<% end %>
 </section>
+
+<% content_for :pos_js do %>
+	<script>
+		WordCloud($('#char-review-tags')[0], { 
+			list: $('.page-data').data('review-tags-json'), 
+			fontFamily: 'The Girl Next Door',
+			minRotation:0,
+			maxRotation:0,
+			minFontSize:7
+		} );
+	</script>
+<% end %>

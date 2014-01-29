@@ -8,4 +8,8 @@ class Review < ActiveRecord::Base
 			'nao'
 		end
 	end
+	
+	def build_review_tags
+		self.review_tag.collect { |t| [t.name, t.value] }
+	end
 end

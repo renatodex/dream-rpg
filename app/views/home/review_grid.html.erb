@@ -1,31 +1,45 @@
 <section id="review-grid">
-
-	<h1><%= image_tag 'views/logo.png' %></h1>
-
-	<% if @reviews.count > 0 %>
-		<% @reviews.each do |r| %>
-			<article class="char-review">
-				<img src="<%= r.image_url %>" class="char-avatar" />
-		
-				<h2><%= r.name %></h2>
-		
-				<table>
-					<tr>
-						<th>Ainda joga?</th>
-						<td><%= r.is_playing? %></td>
-					</tr>
-					<tr>
-						<th>Rating</th>
-						<td><%= r.rating %></td>
-					</tr>			
-				</table>
-		
-				<%= image_tag 'views/home/review_demo.png' %>
-		
-			</article>		
-		<% end %>
+	<nav>
+		<a class="left-arrow" href="<%= review_grid_path %>">
+			<%= image_tag 'views/home/arrow-left.png' %>
+		</a>
+		<a class="right-arrow" href="<%= review_grid_path %>">
+			<%= image_tag 'views/home/arrow-right.png' %>			
+		</a>
+	</nav>	
+	
+	<% if !@review.nil? %>
+		<article class="char-review">
+			<img src="<%= @review.image_url %>" class="char-avatar" />
+	
+			<h2><%= @review.name %></h2>
+	
+			<table style="width:200px">
+				<tr>
+					<th width="30%">Ainda joga?</th>
+					<td width="30%"><%= @review.is_playing? %></td>
+				</tr>
+				<tr>
+					<th>Rating</th>
+					<td>
+						<% @review.rating.to_i.times do %>
+							<%= image_tag "views/home/star.jpg"%>
+						<% end %>
+					</td>
+				</tr>			
+			</table>
+	
+			<%= image_tag 'views/home/review_demo.png', :width => '100%'  %>
+			
+			<div class="review-options">
+				<div class="profile-button">
+					<a class="btn btn-primary btn-lg btn-custom-profile" target="_blank" href="<%= @review.profile_url %>">
+					  <span class="glyphicon glyphicon-user"></span> Ir para o Perfil
+					</a>
+				</div>
+			</div>
+		</article>
 	<% else %>
 		<p class="notyet">Ainda não há nenhuma avaliação. Crie uma agora!</p>
 	<% end %>
-
 </section>

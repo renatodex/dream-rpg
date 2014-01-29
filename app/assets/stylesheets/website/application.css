@@ -8,6 +8,19 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require ../vendor/bootstrap
+ *= require ../vendor/bootstrap/carousel
  *= require_self
  *= require_tree .
  */
+
+.inline-logo {
+	height: 34px;
+	margin-top: 4px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.navbar-brand {
+	padding:5px;
+}

@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
-  layout 'website'
-  
   def index
+		render :layout => 'website'
   end
   
   def register
@@ -27,23 +26,30 @@ class HomeController < ApplicationController
         else
           @errors = u.errors.messages.values.flatten
           @data = params["UserData"]
+					render :layout => 'website'
         end
       else
         redirect_to root_url
       end
+		else
+			render :layout => 'website'
     end
   end
   
   def invalid_key
+		render :layout => 'website'
   end
   
   def no_slots
+		render :layout => 'website'
   end
   
   def wait_soon
+		render :layout => 'website'
   end
 
 	def review_grid
-		@reviews = Review.where({})
+		@review = Review.limit(1).order("RANDOM()").first
+		render :layout => 'bootstrap/navbar'
 	end
 end
